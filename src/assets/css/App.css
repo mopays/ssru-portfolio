@@ -1,8 +1,64 @@
+.main{
+  display: flex;
+  height: 100vh;
+}
+.leftPort{
+  background-color: black;
+  width: 400px;
+  flex-shrink: 0;
+  padding: 0 10px 0 10px;
+  text-align: center;
+  color: white;
+}
+.rightPort{
+  background-color: gray;;
+  width: 100%;
+  flex-grow: 1;
+  padding: 5rem;
+  color: white;
+}
+.titlePort{
+  margin-top: 10px;
+  font-size: 1rem;
+  padding: 15px;
+}
+
+.titlePort h2{
+  color: purple;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+
+
+.name{
+  text-align: center;
+  padding-top: 20px;
+}
+p{
+  margin-bottom: 15px;
+}
 #root {
-  max-width: 1280px;
+  width: 100%;
+  /* max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+   text-align: center;
+ */
+
+}
+.imageProfile{
   text-align: center;
+  padding: 15px;
+  height: 150px;
+  margin: 3px auto;
+}
+.imageProfile img{
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  image-resolution: cover;
+  margin: 0 auto;
 }
 
 .logo {
