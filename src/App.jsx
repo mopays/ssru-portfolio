@@ -28,7 +28,7 @@ const  App = () => {
     <>
       <div className="main">
         <div className="leftPort">
-          <ImageProfiles images="/src/assets/imge/profile.jpg" />
+          <ImageProfiles images="https://cts.ssru.ac.th/Image/EN/EnrollmentImage/pa2p0rcv.jpg" />
 
           <Title title="สันติพงษ์ วรรัตน์ชัยกุล">
             <p>FullStack</p>
