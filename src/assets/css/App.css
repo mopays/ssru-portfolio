@@ -1,9 +1,9 @@
 .main{
   display: flex;
-  height: 100vh;
+  height: 150vh;
 }
 .leftPort{
-  background-color: black;
+  background-color: #9370DB;
   width: 400px;
   flex-shrink: 0;
   padding: 0 10px 0 10px;
@@ -11,7 +11,7 @@
   color: white;
 }
 .rightPort{
-  background-color: gray;;
+  background-color: #6A5ACD;
   width: 100%;
   flex-grow: 1;
   padding: 5rem;
@@ -74,6 +74,22 @@ p{
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+.table{
+  border: 1px solid black;
+  text-align: center;
+}
+
+.tables{
+  text-align: center;
+}
+table, td, th {
+  border: 1px solid;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

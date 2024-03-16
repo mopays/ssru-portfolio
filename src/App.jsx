@@ -57,27 +57,54 @@ const  App = () => {
         <div className="rightPort">
 
           <Title title="Profile">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, libero tempore voluptas at rem aut corporis magnam, quia animi consectetur deserunt ullam provident. Tempora quidem, velit officiis reiciendis ad culpa? </p>
+            <p>กำลังศึกษา ปริญญาตรีชั้นปีที่ 3 ณ มหาวิทยาลัยราชภัฎสวนสุนนันทา คณะเทคโนโลยีสารสนเทศ
+มีประสบการณ์ในการฝึกฝนเขียนโค้ดด้วยภาษา phpPOD และมีความสนใจในการศึกษา jarvascript และ node JS เพิ่มเติม เพื่อเพิ่มทักษะให้หลากหลาย และสามารถนำความรู้ไปใช้ในตำแหน่ง web developer ได้อย่างมีประสิทธิภาพ </p>
           </Title>
 
 
           <Title title="workExpreience">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, libero tempore voluptas at rem aut corporis magnam, quia animi consectetur deserunt ullam provident. Tempora quidem, velit officiis reiciendis ad culpa? </p>
+            <p>เกี่ยวกับ web ecommerce โดยการนำ3d เข้ามาอธิบายรายละเอียดสินค้า</p>
+          </Title>
+          <Title title="internshift">
+            <p>:ปัจจุบันฝึกงานอยู่ที่บริษัท smart shift solution ตำเเหน่ง fullstack developer เริ้มฝึกงานตั้งเเต่ 3 พฤษจิกายนจนถึงปัจจุบัน</p>
           </Title>
 
           <Title title="skill">
-            <p>skill1</p>
-            <p>skill1</p>
-            <p>skill1</p>
+            
+            <ul>
+              <li>html</li>
+              <li>CSS</li>
+              <li>PHP</li>
+              <li>react</li>
+              <li>nodejs</li>
+              <li>java</li>
+              <li>grails</li>
+              <li>jarvascript</li>
+            </ul>
           </Title>
+
 
         </div>
       </div>
 
-      <div>
-        <p>ข้อมูลคนในห้อง</p>
-          {data.map((record) => <div key={record.number}>รหัสนักศึกษา: {record.number} ชื่อนักศึกษา: {record.name}</div>)}
-        </div>
+      <div className="tables">
+        <h2>ข้อมูลคนในห้อง</h2>
+          {data.map((record) => 
+          <div key={record.number}>
+
+            <table>
+              <tr>
+                <th>รหัสนักศึกษา</th>
+                <th>ชื่อนักศึกษา</th>
+              </tr>
+              <tr>
+                <td> {record.number}</td>
+                <td>{record.name}</td>
+              </tr>
+            </table>
+           </div>
+           )}
+      </div>
     </>
   )
 }
