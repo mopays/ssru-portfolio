@@ -2,11 +2,27 @@ import moment from 'moment';
 import './assets/css/App.css'
 import ImageProfiles from './components/ImageProfiles'
 import Title from './components/Title';
-import { useState } from 'react';
+import {   useEffect, useState } from 'react';
+import  axios  from 'axios';
 
-function App() {
+const enpoint = 'https://sheetdb.io/api/v1/7zkskabi3lx7g';
+
+const  App = () => {
 
   const [hide, setHide] = useState(false);
+  const [data, setdata] = useState([]);
+
+  const callAPi = async () =>{
+    return axios.get(enpoint).then((response) => {
+      const data = response.data
+      setdata(data)
+    })
+  }
+  console.log(data)
+
+  useEffect( () =>{
+    callAPi()
+  }, [])
   
   return (
     <>
@@ -35,6 +51,9 @@ function App() {
 
         </div>
 
+      
+
+
         <div className="rightPort">
 
           <Title title="Profile">
@@ -54,6 +73,11 @@ function App() {
 
         </div>
       </div>
+
+      <div>
+        <p>ข้อมูลคนในห้อง</p>
+          {data.map((record) => <div key={record.number}>รหัสนักศึกษา: {record.number} ชื่อนักศึกษา: {record.name}</div>)}
+        </div>
     </>
   )
 }
